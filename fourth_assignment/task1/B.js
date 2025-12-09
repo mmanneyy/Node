@@ -1,0 +1,14 @@
+const fs = require('node:fs');
+if(!fs.existsSync('./logs')) fs.mkdirSync('./logs');
+fs.openSync('./logs/info.log', 'w+');
+fs.openSync('./logs/warning.log', 'w+');
+fs.openSync('./logs/error.log', 'w+');
+fs.writeFileSync('./logs/info.log', 'info');
+fs.writeFileSync('./logs/warning.log', 'warning');
+fs.writeFileSync('./logs/error.log', 'error');
+const contains = fs.readdirSync('./logs');  
+console.log(contains);
+fs.unlinkSync('./logs/info.log');
+fs.unlinkSync('./logs/warning.log');
+fs.unlinkSync('./logs/error.log');
+fs.rmdirSync('./logs');
