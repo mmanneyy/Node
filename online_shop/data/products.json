@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "phone",
+    "price": 1234,
+    "inStock": false
+  },
+  {
+    "id": 2,
+    "title": "headphone",
+    "price": 5678,
+    "inStock": true
+  }
+]
